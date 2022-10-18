@@ -6,7 +6,7 @@ using namespace std;
 class Jogador :public Personagem{
 
 private:
-	static bool Jogador2;
+	static bool Jogador2;	//variavel para saber se tera um ou dois jogadores
 public:
 
 	Jogador();

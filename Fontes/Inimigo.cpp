@@ -1,7 +1,7 @@
 #include "../Cabecalhos/Inimigo.h"
 
 Inimigo::Inimigo(){
-	corpo.setFillColor(sf::Color::Magenta);
+	corpo.setFillColor(sf::Color::Magenta);// mudando a cor do inimigo para distinção
 	corpo.setPosition(300.0f, 300.0f);
 }
 
@@ -13,8 +13,8 @@ Inimigo::Inimigo(float x, float y) {
 Inimigo::~Inimigo(){
 }
 
-void Inimigo::executar(){
-	pTela->draw(corpo);
+void Inimigo::executar(){ //função para como o inimigo irá se portar
+	pTela->draw(corpo); 
 	Limites = corpo.getGlobalBounds();
 }
 

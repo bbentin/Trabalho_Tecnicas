@@ -6,7 +6,7 @@ Jogador::Jogador():Personagem() {
 		corpo.setPosition(400.0, 400.0);
 		corpo.setSize(sf::Vector2f(16.0, 16.0));
 		tem_gravidade = true;		Jogador2 = true;	num_vidas = 3;
-	}
+	}													//mesma construtora que ira funcionar de maneira diferente para 1 ou 2 jogadores
 	else{
 		corpo.setPosition(700.0, 700.0);
 		corpo.setSize(sf::Vector2f(16.0, 16.0));	corpo.setFillColor(sf::Color::White);
@@ -30,7 +30,7 @@ void Jogador::executar2() {
 	Limites = corpo.getGlobalBounds();
 }
 
-void Jogador::mover(){
+void Jogador::mover(){ //controle do jogador 1
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
 		corpo.move(V_esq);
 	}
@@ -45,7 +45,7 @@ void Jogador::mover(){
 	}
 }
 
-void Jogador::mover2() {
+void Jogador::mover2() { //controle do jogador 2
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
 		corpo.move(V_esq);
 	}
@@ -60,4 +60,4 @@ void Jogador::mover2() {
 	}
 }
 
-bool Jogador::Jogador2 = false;
+bool Jogador::Jogador2 = false; 
