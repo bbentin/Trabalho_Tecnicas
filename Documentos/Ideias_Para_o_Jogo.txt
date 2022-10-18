@@ -1,0 +1,2 @@
+Const para blocos imóveis
+Colisões dos tipos : Obstaculo-Personagem, Personagem - Personagem
