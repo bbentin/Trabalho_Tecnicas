@@ -1,14 +1,13 @@
 #pragma once
 #include "Ente.h"
+#include "SFML/System/Clock.hpp"
 
 namespace Entidades {
 	class Entidade :public Ente {
 
 	protected:
-		int x;	int y;
-		const sf::Vector2f gravidade;
-		bool tem_gravidade;
-		sf::Vector2f V_esq, V_dir, V_cima;
+		sf::Vector2f posicao;
+		sf::Time intervalo;
 	public:
 		Entidade();
 		~Entidade();

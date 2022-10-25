@@ -10,6 +10,7 @@ private:
 	Jogador Primeiro, Segundo;
 	Gerenciador_Colisoes Colisoes;
 	Inimigo Gabriel, Ze;
+	sf::Clock relogio;
 public:
 	Principal();
 	~Principal();

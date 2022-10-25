@@ -5,7 +5,7 @@ Principal::Principal() :Tela(sf::VideoMode(800, 800), "Jogo Funcionando"),Gabrie
 	Colisoes.setJogador(&Primeiro);
 	Gabriel.setTela(&Tela); Colisoes.InserirInimigo(&Gabriel);	//Jogadores e Inimigos criados estaticamente para fins de teste
 	Ze.setTela(&Tela);	Colisoes.InserirInimigo(&Ze);
-	Tela.setVerticalSyncEnabled(true);
+	Primeiro.setIntervalo(relogio);	Segundo.setIntervalo(relogio);
 }
 Principal::~Principal() {
 }
@@ -13,17 +13,21 @@ Principal::~Principal() {
 void Principal::executar(){
 	
 	while (Tela.isOpen()) {
+	
 		sf::Event Eventos;
 		while (Tela.pollEvent(Eventos)) {
 			if (Eventos.type == sf::Event::Closed) {
 				Tela.close();
 			}
 			
-			Tela.display();
+	
 			Tela.clear();
-			Primeiro.executar();	Segundo.executar2();
-			Gabriel.executar();	Ze.executar();
-			//Tela.display();
+			Segundo.setIntervalo(relogio);
+			Primeiro.executar();
+			Segundo.executar2();
+			//Gabriel.executar();	Ze.executar();
+			Tela.display();
+
 		}
 	}
 }

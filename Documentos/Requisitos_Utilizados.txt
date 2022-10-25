@@ -1,0 +1,6 @@
+Classes, objetos e atributos - Sim, em todas as classes e namespaces.
+Métodos com retorno const e parametro const - Ainda não
+Construtores - Sem parametros por enquanto
+Classe principal - Sim, na classe Principal
+Associação direcional  - apenas unilateral por enquanto.
+
