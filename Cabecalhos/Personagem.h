@@ -17,7 +17,7 @@ namespace Personagens {
 
 		void calcular_velocidade(sf::Time temp, sf::Vector2f acelera);
 		void calcular_aceleracao(sf::Vector2f forca);
-		void somar_forca(sf::Vector2f forcaext);
+		void somar_forca(sf::Vector2f forca_ext);
 		void calcular_posicao(sf::Time temp, sf::Vector2f velocidad);
 		void setIntervalo(sf::Clock passado);
 		void calcular_Fisica();

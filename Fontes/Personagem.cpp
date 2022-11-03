@@ -41,7 +41,7 @@ void Personagens::Personagem::setIntervalo(sf::Clock passado) {
 }
 
 void Personagens::Personagem::calcular_Fisica(){
-	somar_forca(gravidade);
+	//somar_forca(gravidade);
 	calcular_aceleracao(forca_resultante);	calcular_velocidade(intervalo, aceleracao);	calcular_posicao(intervalo, velocidade);
 }
 
