@@ -1,1 +1,1 @@
-#include "Gerenciador_Grafico.h"
+#include "../Cabecalhos/Gerenciador_Grafico.h"

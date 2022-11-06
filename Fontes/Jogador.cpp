@@ -29,18 +29,18 @@ void Jogador::executar2() {
 	calcular_Fisica();
 	corpo.move(floor(posicao.x),floor(posicao.y));
 	pTela->draw(corpo);
-	Limites = corpo.getGlobalBounds();
+	Limites = corpo.getGlobalBounds();	forca_resultante.x = 0; forca_resultante.y = 0;
 }
 
 void Jogador::mover(){ //controle do jogador 1
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-		somar_forca(v_Esquerda);
+		somar_forca(f_Esquerda);
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-		somar_forca(v_Cima);
+		somar_forca(f_Cima);
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-		somar_forca(v_Direita);
+		somar_forca(f_Direita);				/* Não ta se mexendo pra direita*/
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
 	}

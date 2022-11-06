@@ -8,7 +8,7 @@ namespace Entidades {
 	protected:
 		sf::Vector2f posicao;
 		sf::Texture textura;
-		sf::Sprite	personalidade;
+		sf::Sprite	personagem;
 	public:
 		Entidade();
 		~Entidade();

@@ -7,7 +7,7 @@ namespace Personagens {
 	protected:
 		int num_vidas;
 		sf::Vector2f velocidade, aceleracao, forca_resultante;
-		const static sf::Vector2f gravidade, v_Cima, v_Direita, v_Esquerda;
+		const static sf::Vector2f gravidade, f_Cima, f_Direita, f_Esquerda;
 		float massa;
 		sf::Time intervalo;
 	public:
