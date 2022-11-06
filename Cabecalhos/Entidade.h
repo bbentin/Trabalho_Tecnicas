@@ -7,7 +7,8 @@ namespace Entidades {
 
 	protected:
 		sf::Vector2f posicao;
-		sf::Time intervalo;
+		sf::Texture textura;
+		sf::Sprite	personagem;
 	public:
 		Entidade();
 		~Entidade();

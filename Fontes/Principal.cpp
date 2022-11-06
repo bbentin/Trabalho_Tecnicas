@@ -19,8 +19,7 @@ void Principal::executar(){
 			if (Eventos.type == sf::Event::Closed) {
 				Tela.close();
 			}
-			
-	
+			relogio.restart();
 			Tela.clear();
 			Segundo.setIntervalo(relogio);
 			Primeiro.executar();

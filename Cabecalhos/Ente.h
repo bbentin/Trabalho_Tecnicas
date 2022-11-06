@@ -4,9 +4,10 @@ class Ente{
 
 protected:
 	int id;
-	sf::RenderWindow* pTela;
+
 	sf::RectangleShape corpo;
 	sf::FloatRect Limites;
+	sf::RenderWindow* pTela;
 public:
 	Ente();
 	~Ente();
@@ -17,3 +18,15 @@ public:
 	sf::FloatRect getLimites();
 };
 
+/*class GG
+{
+	sf::RenderWindow* pTela;
+	
+	public
+		
+		void desenhar(Ente* p)
+	{
+		funcao (p->getCorpo())
+	}
+};
+*/
