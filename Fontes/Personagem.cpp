@@ -2,9 +2,9 @@
 using namespace Personagens;
 
 const sf::Vector2f Personagem::gravidade(0.0f, 2.0f);
-const sf::Vector2f Personagem::v_Cima(0.0f,-6.8f);
-const sf::Vector2f Personagem::v_Direita(6.0f,0.0f);
-const sf::Vector2f Personagem::v_Esquerda(-6.0f, 0.0f);
+const sf::Vector2f Personagem::f_Cima(0.0f,-6.8f);
+const sf::Vector2f Personagem::f_Direita(6.0f,0.0f);
+const sf::Vector2f Personagem::f_Esquerda(-6.0f, 0.0f);
 
 
 Personagem::Personagem():Entidade(),massa(3) {
@@ -41,7 +41,7 @@ void Personagens::Personagem::setIntervalo(sf::Clock passado) {
 }
 
 void Personagens::Personagem::calcular_Fisica(){
-	somar_forca(gravidade);
+	//somar_forca(gravidade);
 	calcular_aceleracao(forca_resultante);	calcular_velocidade(intervalo, aceleracao);	calcular_posicao(intervalo, velocidade);
 }
 
