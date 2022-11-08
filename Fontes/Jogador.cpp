@@ -25,11 +25,12 @@ void Jogador::executar(){
 }
 
 void Jogador::executar2() {
-	mover();
+	mover(); mover2();
 	calcular_Fisica();
 	corpo.move(floor(posicao.x),floor(posicao.y));
+	cout << "posicao :" << posicao.x << endl;
 	pTela->draw(corpo);
-	Limites = corpo.getGlobalBounds();	forca_resultante.x = 0; forca_resultante.y = 0;
+	Limites = corpo.getGlobalBounds();
 }
 
 void Jogador::mover(){ //controle do jogador 1
@@ -40,24 +41,25 @@ void Jogador::mover(){ //controle do jogador 1
 		somar_forca(f_Cima);
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-		somar_forca(f_Direita);				/* Não ta se mexendo pra direita*/
+		somar_forca(f_Direita);		
 	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)){
+		somar_forca(gravidade);
 	}
 }
 
 void Jogador::mover2() { //controle do jogador 2
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-		forca_resultante.x -= 18.0f;
+		somar_forca(f_Esquerda);
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-		forca_resultante.y -= 18.0f;
+		somar_forca(f_Cima);
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-		forca_resultante.x += 18.0f;
+		somar_forca(f_Direita);
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-		forca_resultante.y += 18.0f;
+		forca_resultante.y += 9.0f;
 	}
 }
 

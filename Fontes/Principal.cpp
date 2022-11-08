@@ -19,14 +19,19 @@ void Principal::executar(){
 			if (Eventos.type == sf::Event::Closed) {
 				Tela.close();
 			}
-			relogio.restart();
-			Tela.clear();
-			Segundo.setIntervalo(relogio);
-			Primeiro.executar();
-			Segundo.executar2();
-			//Gabriel.executar();	Ze.executar();
-			Tela.display();
-
+			while (true) {// roda "liso"
+				relogio.restart();
+				Tela.clear();
+				Segundo.setIntervalo(relogio);
+				Primeiro.executar();
+				Segundo.executar2();
+				//Gabriel.executar();	Ze.executar();
+				Tela.display(); 
+				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+					Tela.close();
+					return;// sai do loop infinito
+				}
+			}
 		}
 	}
 }
