@@ -27,7 +27,7 @@ void Jogador::executar(){
 void Jogador::executar2() {
 	mover(); mover2();
 	calcular_Fisica();
-	corpo.move(floor(posicao.x),floor(posicao.y));
+	corpo.move(posicao);
 	cout << "posicao :" << posicao.x << endl;
 	pTela->draw(corpo);
 	Limites = corpo.getGlobalBounds();
