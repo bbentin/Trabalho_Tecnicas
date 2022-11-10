@@ -13,7 +13,7 @@ class Gerenciador_Colisoes{
 private:
 	vector<Inimigo*> LInimigos;
 	list<Obstaculo*> LObstaculos;
-	list<float> mins_e_maximos;
+	vector<sf::Vector2f> mins_e_maximos;
 	list<sf::Vector2f> intervalos_ativos;
 	Jogador* Jogador1;
 	Jogador* Jogador2;
@@ -24,6 +24,8 @@ public:
 	~Gerenciador_Colisoes();
 
 	bool InserirInimigo(Inimigo* ini);
+	void organizar();
+	void ativar_intervalos();
 	void setJogador(Jogador* Jog);
 
 };
