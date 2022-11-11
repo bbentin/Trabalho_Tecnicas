@@ -1,2 +1,5 @@
 SFML : https://www.sfml-dev.org/tutorials/2.5/
 Física : https://www.toptal.com/game/video-game-physics-part-i-an-introduction-to-rigid-body-dynamics
+Sprites : https://arks.itch.io/dino-characters
+	    https://analogstudios.itch.io/four-seasons-platformer-tileset
+Tileset: https://analogstudios.itch.io/four-seasons-platformer-sprites
