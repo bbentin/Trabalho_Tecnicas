@@ -14,7 +14,7 @@ Personagem::~Personagem(){
 }
 
 void Personagens::Personagem::calcular_velocidade(sf::Time temp, sf::Vector2f acelera){
-	velocidade.x = acelera.x * temp.asMicroseconds() * 0.0017;	velocidade.y = acelera.y * temp.asMicroseconds() * 0.0017;
+	velocidade.x = acelera.x * temp.asMicroseconds() * TEMPO;	velocidade.y = acelera.y * temp.asMicroseconds() * TEMPO;
 }
 
 void Personagens::Personagem::calcular_aceleracao(sf::Vector2f forca){
@@ -22,7 +22,7 @@ void Personagens::Personagem::calcular_aceleracao(sf::Vector2f forca){
 }
 
 void Personagens::Personagem::calcular_posicao(sf::Time temp, sf::Vector2f velo){
-	posicao.x = velo.x * temp.asMicroseconds() * 0.0017;	posicao.y = velo.y * temp.asMicroseconds() * 0.0017;
+	posicao.x = velo.x * temp.asMicroseconds() * TEMPO;	posicao.y = velo.y * temp.asMicroseconds() * TEMPO;
 }
 
 void Personagens::Personagem::somar_forca(sf::Vector2f forca_externa) {

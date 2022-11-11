@@ -22,6 +22,7 @@ void Principal::executar(){
 			while (true) {// roda "liso"
 				relogio.restart();
 				Tela.clear();
+				Primeiro.setIntervalo(relogio);
 				Segundo.setIntervalo(relogio);
 				Primeiro.executar();
 				Segundo.executar2();

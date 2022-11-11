@@ -18,17 +18,20 @@ Jogador::~Jogador(){
 }
 
 void Jogador::executar(){
-	pTela->draw(corpo);
 	mover();
+	calcular_Fisica();
+	corpo.move(posicao);
+	cout << "posicao :" << posicao.x << endl;
+	pTela->draw(corpo);
 	Limites = corpo.getGlobalBounds();
 
 }
 
 void Jogador::executar2() {
-	mover(); mover2();
+	mover2();
 	calcular_Fisica();
 	corpo.move(posicao);
-	cout << "posicao :" << posicao.x << endl;
+	cout << "posicao2 :" << posicao.x << endl;
 	pTela->draw(corpo);
 	Limites = corpo.getGlobalBounds();
 }
