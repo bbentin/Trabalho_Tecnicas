@@ -14,7 +14,7 @@ bool Gerenciador_Colisoes::InserirInimigo(Inimigo* ini) {
 	return true;
 }
 
-/*void Gerenciador_Colisoes::organizar() {
+/* void Gerenciador_Colisoes::organizar() {
 	int i = 0;
 	while (i < LInimigos.size()) {
 		mins_e_maximos.push_back(LInimigos[i]->getLocal());
@@ -23,7 +23,9 @@ bool Gerenciador_Colisoes::InserirInimigo(Inimigo* ini) {
 }
 */
 
+
 void Gerenciador_Colisoes::setJogador(Jogador* Prim){
 	Jogador1 = Prim; 
 }
+
 
