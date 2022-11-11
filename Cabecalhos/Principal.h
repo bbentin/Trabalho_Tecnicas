@@ -8,7 +8,7 @@ class Principal{
 private:
 	sf::RenderWindow Tela;
 	Jogador Primeiro, Segundo;
-	//Gerenciador_Colisoes Colisoes;
+	Gerenciador_Colisoes Colisoes;
 	Inimigo Gabriel, Ze;
 	sf::Clock relogio;
 public:

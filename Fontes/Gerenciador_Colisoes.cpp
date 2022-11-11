@@ -21,11 +21,9 @@ bool Gerenciador_Colisoes::InserirInimigo(Inimigo* ini) {
 	}
 	sort(mins_e_maximos.begin(), mins_e_maximos.end());
 }
-
+*/
 
 void Gerenciador_Colisoes::setJogador(Jogador* Prim){
 	Jogador1 = Prim; 
 }
 
-
-*/

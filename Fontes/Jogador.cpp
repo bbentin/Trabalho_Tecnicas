@@ -17,15 +17,16 @@ Jogador::Jogador():Personagem() {
 Jogador::~Jogador(){
 }
 
-void Jogador::executar(){
-	pTela->draw(corpo);
+void Jogador::executar() {
 	mover();
+	calcular_Fisica();
+	corpo.move(posicao);
+	cout << "posicao :" << posicao.x << endl;
+	pTela->draw(corpo);
 	Limites = corpo.getGlobalBounds();
-
 }
-
 void Jogador::executar2() {
-	mover(); mover2();
+	mover2();
 	calcular_Fisica();
 	corpo.move(posicao);
 	cout << "posicao :" << posicao.x << endl;
@@ -59,7 +60,7 @@ void Jogador::mover2() { //controle do jogador 2
 		somar_forca(f_Direita);
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-		forca_resultante.y += 9.0f;
+		somar_forca(gravidade);
 	}
 }
 

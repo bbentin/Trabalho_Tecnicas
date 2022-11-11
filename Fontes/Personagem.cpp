@@ -8,7 +8,7 @@ const sf::Vector2f Personagem::f_Esquerda(-60.0f, 0.0f);
 
 
 Personagem::Personagem():Entidade(),forca_resultante(0.0f,0.0f) {
-	corpo.setSize(sf::Vector2f(16.0, 16.0));	num_vidas = 0;	massa = 1;
+	corpo.setSize(sf::Vector2f(16.0, 16.0));	num_vidas = 3;
 }
 Personagem::~Personagem(){
 }
@@ -22,7 +22,7 @@ void Personagens::Personagem::calcular_aceleracao(sf::Vector2f forca){
 }
 
 void Personagens::Personagem::calcular_posicao(sf::Time temp, sf::Vector2f velo){
-	posicao.x = velo.x * temp.asMicroseconds() * 0.0017;	posicao.y = velo.y * temp.asMicroseconds() * 0.0017;
+	posicao.x = velo.x * temp.asMicroseconds() * TEMPO;	posicao.y = velo.y * temp.asMicroseconds() * 0.0017;
 }
 
 void Personagens::Personagem::somar_forca(sf::Vector2f forca_externa) {
