@@ -7,6 +7,7 @@ namespace Entidades {
 
 	protected:
 		sf::Vector2f posicao;
+		sf::Vector2f max_min_x,max_min_y;
 		sf::Texture textura;
 		sf::Sprite	personagem;
 	public:
@@ -15,5 +16,7 @@ namespace Entidades {
 
 		virtual void executar() = 0;
 		virtual void mover() = 0;
+		void setMax_min();
+		sf::Vector2f getLocal();
 	};
 }

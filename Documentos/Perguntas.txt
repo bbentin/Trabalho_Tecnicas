@@ -1,2 +1,2 @@
-Colisões para todos?
 mediator no gerenciador de colisões, devo por isso para todas as classes?
+Eventos

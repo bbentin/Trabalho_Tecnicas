@@ -1,0 +1,24 @@
+﻿  Jogador.cpp
+  Personagem.cpp
+C:\Users\rbben\Documents\Faculdade\2022-2\Tecnicas\Jogo_Trabalho\Jogo_Trabalho\Fontes\Personagem.cpp(17,51): warning C4244: '=': conversão de 'double' para 'T', possível perda de dados
+          with
+          [
+              T=float
+          ]
+C:\Users\rbben\Documents\Faculdade\2022-2\Tecnicas\Jogo_Trabalho\Jogo_Trabalho\Fontes\Personagem.cpp(17,110): warning C4244: '=': conversão de 'double' para 'T', possível perda de dados
+          with
+          [
+              T=float
+          ]
+C:\Users\rbben\Documents\Faculdade\2022-2\Tecnicas\Jogo_Trabalho\Jogo_Trabalho\Fontes\Personagem.cpp(25,45): warning C4244: '=': conversão de 'double' para 'T', possível perda de dados
+          with
+          [
+              T=float
+          ]
+C:\Users\rbben\Documents\Faculdade\2022-2\Tecnicas\Jogo_Trabalho\Jogo_Trabalho\Fontes\Personagem.cpp(25,98): warning C4244: '=': conversão de 'double' para 'T', possível perda de dados
+          with
+          [
+              T=float
+          ]
+  Gerando Código...
+  Jogo_Trabalho.vcxproj -> C:\Users\rbben\Documents\Faculdade\2022-2\Tecnicas\Jogo_Trabalho\Jogo_Trabalho\Debug\Jogo_Trabalho.exe

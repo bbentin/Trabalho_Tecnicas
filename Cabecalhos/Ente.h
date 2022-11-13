@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <iostream>
 class Ente{
 
 protected:
@@ -8,6 +9,8 @@ protected:
 	sf::RectangleShape corpo;
 	sf::FloatRect Limites;
 	sf::RenderWindow* pTela;
+
+	
 public:
 	Ente();
 	~Ente();
