@@ -48,31 +48,31 @@
     <ClInclude Include="Cabecalhos\Gerenciador_Grafico.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
-    <ClInclude Include="Cabecalhos\Inimigo_2.h">
+    <ClInclude Include="Cabecalhos\Bomba.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
-    <ClInclude Include="Cabecalhos\Chefe.h">
+    <ClInclude Include="Cabecalhos\Balao.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
-    <ClInclude Include="Cabecalhos\Inimigo_1.h">
+    <ClInclude Include="Cabecalhos\Cogumelo.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
-    <ClInclude Include="Cabecalhos\Obstaculo_1.h">
+    <ClInclude Include="Cabecalhos\Cactus.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
-    <ClInclude Include="Cabecalhos\Obstaculo_2.h">
+    <ClInclude Include="Cabecalhos\Lava.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
-    <ClInclude Include="Cabecalhos\Projetil.h">
+    <ClInclude Include="Cabecalhos\Pedra.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
     <ClInclude Include="Cabecalhos\Fase.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
-    <ClInclude Include="Cabecalhos\Fase_1.h">
+    <ClInclude Include="Cabecalhos\Summer.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
-    <ClInclude Include="Cabecalhos\Fase_2.h">
+    <ClInclude Include="Cabecalhos\Autumn.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
   </ItemGroup>
@@ -110,22 +110,22 @@
     <ClCompile Include="Fontes\Gerenciador_Grafico.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="Fontes\Inimigo_2.cpp">
+    <ClCompile Include="Fontes\Bomba.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="Fontes\Chefe.cpp">
+    <ClCompile Include="Fontes\Balao.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="Fontes\Inimigo_1.cpp">
+    <ClCompile Include="Fontes\Cogumelo.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="Fontes\Obstaculo_1.cpp">
+    <ClCompile Include="Fontes\Cactus.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="Fontes\Obstaculo_2.cpp">
+    <ClCompile Include="Fontes\Lava.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="Fontes\Projetil.cpp">
+    <ClCompile Include="Fontes\Pedra.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
     <ClCompile Include="Fontes\Fase.cpp">
