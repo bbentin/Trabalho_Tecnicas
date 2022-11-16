@@ -19,30 +19,29 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Jogo_SFML\Jogo_SFML\Cabecalhos\Chefe.h" />
-    <ClInclude Include="Cabecalhos\Chefe.h" />
+    <ClInclude Include="Cabecalhos\Balao.h" />
     <ClInclude Include="Cabecalhos\Ente.h" />
     <ClInclude Include="Cabecalhos\Entidade.h" />
     <ClInclude Include="Cabecalhos\Fase.h" />
-    <ClInclude Include="Cabecalhos\Fase_1.h" />
-    <ClInclude Include="Cabecalhos\Fase_2.h" />
+    <ClInclude Include="Cabecalhos\Summer.h" />
+    <ClInclude Include="Cabecalhos\Autumn.h" />
     <ClInclude Include="Cabecalhos\Gerenciador_Colisoes.h" />
     <ClInclude Include="Cabecalhos\Gerenciador_Grafico.h" />
     <ClInclude Include="Cabecalhos\Inimigo.h" />
-    <ClInclude Include="Cabecalhos\Inimigo_1.h" />
-    <ClInclude Include="Cabecalhos\Inimigo_2.h" />
+    <ClInclude Include="Cabecalhos\Cogumelo.h" />
+    <ClInclude Include="Cabecalhos\Bomba.h" />
     <ClInclude Include="Cabecalhos\Jogador.h" />
     <ClInclude Include="Cabecalhos\Lista.h" />
     <ClInclude Include="Cabecalhos\ListaEntidades.h" />
     <ClInclude Include="Cabecalhos\Obstaculo.h" />
-    <ClInclude Include="Cabecalhos\Obstaculo_1.h" />
-    <ClInclude Include="Cabecalhos\Obstaculo_2.h" />
+    <ClInclude Include="Cabecalhos\Cactus.h" />
+    <ClInclude Include="Cabecalhos\Lava.h" />
     <ClInclude Include="Cabecalhos\Personagem.h" />
     <ClInclude Include="Cabecalhos\Principal.h" />
-    <ClInclude Include="Cabecalhos\Projetil.h" />
+    <ClInclude Include="Cabecalhos\Pedra.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Fontes\Chefe.cpp" />
+    <ClCompile Include="Fontes\Balao.cpp" />
     <ClCompile Include="Fontes\Ente.cpp" />
     <ClCompile Include="Fontes\Entidade.cpp" />
     <ClCompile Include="Fontes\Fase.cpp" />
@@ -51,17 +50,17 @@
     <ClCompile Include="Fontes\Gerenciador_Colisoes.cpp" />
     <ClCompile Include="Fontes\Gerenciador_Grafico.cpp" />
     <ClCompile Include="Fontes\Inimigo.cpp" />
-    <ClCompile Include="Fontes\Inimigo_1.cpp" />
-    <ClCompile Include="Fontes\Inimigo_2.cpp" />
+    <ClCompile Include="Fontes\Cogumelo.cpp" />
+    <ClCompile Include="Fontes\Bomba.cpp" />
     <ClCompile Include="Fontes\Jogador.cpp" />
     <ClCompile Include="Fontes\ListaEntidades.cpp" />
     <ClCompile Include="Fontes\main.cpp" />
     <ClCompile Include="Fontes\Obstaculo.cpp" />
-    <ClCompile Include="Fontes\Obstaculo_1.cpp" />
-    <ClCompile Include="Fontes\Obstaculo_2.cpp" />
+    <ClCompile Include="Fontes\Cactus.cpp" />
+    <ClCompile Include="Fontes\Lava.cpp" />
     <ClCompile Include="Fontes\Personagem.cpp" />
     <ClCompile Include="Fontes\Principal.cpp" />
-    <ClCompile Include="Fontes\Projetil.cpp" />
+    <ClCompile Include="Fontes\Pedra.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -72,6 +71,7 @@
     <ProjectGuid>{046dd45e-a352-4091-848e-21412eab9826}</ProjectGuid>
     <RootNamespace>JogoTrabalho</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Dino_Seasons</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
