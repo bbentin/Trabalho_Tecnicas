@@ -7,7 +7,11 @@ Principal::Principal() :Tela(sf::VideoMode(640, 480), "Jogo Funcionando"),Gabrie
 	Ze.setTela(&Tela);	Colisoes.InserirInimigo(&Ze);
 	Primeiro.setIntervalo(relogio);	Segundo.setIntervalo(relogio);
 	Cacto.setTela(&Tela);
+	Cogumelo.setTela(&Tela);
+	Bomb.setTela(&Tela);
+	Chefe.setTela(&Tela); Ped.setTela(&Tela); //chefe e seu projetil
 }
+
 Principal::~Principal() {
 }
 

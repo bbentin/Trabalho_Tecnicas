@@ -3,7 +3,7 @@
 
 
 Obstaculos::Cactus::Cactus(){
-	corpo.setSize(sf::Vector2f(14.0, 2 * espaco));
+	corpo.setSize(sf::Vector2f(14.0, espaco));
 	corpo.setPosition(100.0, 50.0);
 
 	textura.loadFromFile("Images/Obstaculos/Objetos/Cacto.png");
