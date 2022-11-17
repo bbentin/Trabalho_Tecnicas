@@ -36,9 +36,9 @@ void Personagens::Personagem::setIntervalo(sf::Clock passado) {
 
 void Personagens::Personagem::calcular_Fisica(){
 	//somar_forca(gravidade);
-	calcular_aceleracao(forca_resultante); std::cout << "Forca em x :" << forca_resultante.x << std::endl;
-	calcular_velocidade(intervalo, aceleracao);	std::cout << "Aceleracao em x :" << aceleracao.x << std::endl;
-	calcular_posicao(intervalo, velocidade);	std::cout << "Velocidade em x :" << velocidade.x << std::endl;
+	calcular_aceleracao(forca_resultante); 
+	calcular_velocidade(intervalo, aceleracao);	
+	calcular_posicao(intervalo, velocidade);	
 	forca_resultante.x = 0; forca_resultante.y = 0;
 }
 
