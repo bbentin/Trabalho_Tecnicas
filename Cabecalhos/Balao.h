@@ -1,7 +1,16 @@
 #pragma once
 #include "../Cabecalhos/Personagem.h"
 namespace Personagens {
-	class Chefe :public Personagem {
+	class Balao :public Personagem {
 
+	private:
+		int vida;
+
+	public:
+		Balao();
+		~Balao();
+
+		void mover();
+		void executar();
 	};
 }
