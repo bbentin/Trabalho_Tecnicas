@@ -2,7 +2,7 @@
 
 
 Gerenciador_Colisoes::Gerenciador_Colisoes() {
-	LInimigos.clear();	Jogador1 = nullptr;		Jogador2 = nullptr;	
+	LInimigos.clear();	
 }
 
 Gerenciador_Colisoes::~Gerenciador_Colisoes() {
@@ -25,7 +25,6 @@ bool Gerenciador_Colisoes::InserirInimigo(Inimigo* ini) {
 
 
 void Gerenciador_Colisoes::setJogador(Jogador* Prim){
-	Jogador1 = Prim; 
 }
 
 
