@@ -25,6 +25,7 @@ void Principal::executar(){
 				Segundo.setIntervalo(relogio);
 				Primeiro.executar();
 				Segundo.executar2();
+
 				//Gabriel.executar();	Ze.executar();
 				Tela.display(); 
 				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
