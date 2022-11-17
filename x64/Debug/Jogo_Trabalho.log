@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: O diretório intermediário (x64\Debug\) contém arquivos compartilhados de outro projeto (Jogo_Trabalho.vcxproj). Isso pode levar a um comportamento incorreto de limpeza e recompilação.
   Balao.cpp
   Ente.cpp
@@ -99,9 +100,14 @@ C:\Users\rbben\Documents\Faculdade\2022-2\Tecnicas\Jogo_Trabalho\SFML\lib\sfml-n
 C:\Users\rbben\Documents\Faculdade\2022-2\Tecnicas\Jogo_Trabalho\SFML\lib\sfml-system-d.lib : warning LNK4272: o tipo de máquina da biblioteca 'x86' está em conflito com o tipo de máquina de destino 'x64'
 C:\Users\rbben\Documents\Faculdade\2022-2\Tecnicas\Jogo_Trabalho\Jogo_Trabalho\x64\Debug\Dino_Seasons.exe : fatal error LNK1120: 34 externo não resolvidos
 =======
+=======
+>>>>>>> 0f8f0889dd5e163006770339ec1a1a7bda663cb2
 ﻿  Gerenciador_Colisoes.cpp
   Principal.cpp
   main.cpp
   Gerando Código...
   Jogo_Trabalho.vcxproj -> C:\Users\seiji\source\repos\Trabalho_Tecnicas\x64\Debug\Jogo_Trabalho.exe
+<<<<<<< HEAD
+>>>>>>> 0f8f0889dd5e163006770339ec1a1a7bda663cb2
+=======
 >>>>>>> 0f8f0889dd5e163006770339ec1a1a7bda663cb2
