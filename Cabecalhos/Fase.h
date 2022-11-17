@@ -6,8 +6,8 @@ namespace Fases {
 	
 	private:
 		sf::RectangleShape background;
-		vector<Obstaculo*> obs_proprios;
-
+		vector<Entidade*> obs_proprios;
+	
 	public:
 
 	};

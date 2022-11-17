@@ -1,6 +1,7 @@
 #pragma once
 #include "Ente.h"
 #include "SFML/System/Clock.hpp"
+#define espaco 16.0
 
 namespace Entidades {
 	class Entidade :public Ente {
@@ -9,7 +10,7 @@ namespace Entidades {
 		sf::Vector2f posicao;
 		sf::Vector2f max_min_x,max_min_y;
 		sf::Texture textura;
-		sf::Sprite	personagem;
+		sf::Sprite	sprit;
 	public:
 		Entidade();
 		~Entidade();
