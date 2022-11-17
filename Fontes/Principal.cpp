@@ -1,6 +1,6 @@
 #include "../Cabecalhos/Principal.h"
 
-Principal::Principal() :Tela(sf::VideoMode(800, 800), "Jogo Funcionando"),Gabriel(100.0f,100.0f) {
+Principal::Principal() :Tela(sf::VideoMode(640, 480), "Jogo Funcionando"),Gabriel(100.0f,100.0f) {
 	Primeiro.setTela(&Tela);	Segundo.setTela(&Tela);
 	Colisoes.setJogador(&Primeiro);
 	Gabriel.setTela(&Tela); Colisoes.InserirInimigo(&Gabriel);	//Jogadores e Inimigos criados estaticamente para fins de teste
