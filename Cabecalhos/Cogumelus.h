@@ -4,7 +4,6 @@
 namespace Personagens {
 	class Cogumelus :public Inimigo {
 	private:
-		int vida;
 		//float velocidade; ???
 
 	public:

@@ -16,7 +16,6 @@ private:
 	Jogador Primeiro, Segundo;
 	Gerenciador_Colisoes Colisoes;
 	Chao floor;
-	Inimigo Gabriel, Ze;
 	sf::Clock relogio;
 	Cactus Cacto;
 	Cogumelus Cogumelo;

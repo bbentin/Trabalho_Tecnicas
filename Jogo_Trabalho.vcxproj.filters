@@ -75,7 +75,7 @@
     <ClInclude Include="Cabecalhos\Autumn.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
-    <ClInclude Include="..\Jogo_SFML\Jogo_SFML\Cabecalhos\Chefe.h">
+    <ClInclude Include="Cabecalhos\Chao.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
   </ItemGroup>
@@ -138,6 +138,9 @@
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
     <ClCompile Include="Fontes\Fase_2.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="Fontes\Chao.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
   </ItemGroup>

@@ -2,12 +2,12 @@
 #include <iostream>
 using namespace std;
 namespace Listas {
-	template<class tipo>class Lista {
+	template<class TL>class Lista {
 	public:
-		template<class tipo>class Elemento {
+		template<class TE>class Elemento {
 		private:
-			Elemento<tipo>* pProx;
-			tipo* pInfo;
+			Elemento<TE>* pProx;
+			TE* pInfo;
 		public:
 
 			Elemento() {
@@ -17,46 +17,46 @@ namespace Listas {
 				pProx = nullptr;	pInfo = nullptr;
 			}
 
-			Elemento<tipo>* getProx() {
+			Elemento<TE>* getProx() {
 				return pProx;
 			}
-			void setProx(Elemento<tipo>* Prox) {
+			void setProx(Elemento<TE>* Prox) {
 				pProx = Prox;
 			}
-			tipo* getInfo() {
+			TL* getInfo() {
 				return pInfo;
 			}
 
-			void setInfo(tipo* info) {
+			void setInfo(TE* info) {
 				pInfo = info;
 			}
 
 		};
-	private:
-		Elemento<tipo>* pPrimeiro;
-		Elemento<tipo>* pAtual;
+	private:	
+		Elemento<TL>* pPrimeiro;
+		Elemento<TL>* pAtual;
 	public:
 
 		Lista();
 		~Lista();
 
-		bool InserirElemento(tipo* Elemento);
+		bool InserirElemento(TL* Elemento);
 
-		Elemento<tipo>* getPrimeiro() {
+		Elemento<TL>* getPrimeiro() {
 			return pPrimeiro;
 		}
 		
-		Elemento<tipo>* getAtual() {
+		Elemento<TL>* getAtual() {
 			return pAtual;
 		}
 		
-		bool RemoverElemento(tipo* Elemen) {
+		bool RemoverElemento(TL* Elemen) {
 			if (Elemen == nullptr) { 
 				cout << "Elemento invalido" << endl;
 				return false; 
 			}
 
-			Elemento<tipo>* pAux = pPrimeiro;
+			Elemento<TL>* pAux = pPrimeiro;
 
 			while (pAux != pAtual) {
 				if (pAux->getProx()->getInfo() == Elemen) {
@@ -75,23 +75,23 @@ namespace Listas {
 
 	};
 
-	template<class tipo>
-	inline Lista<tipo>::Lista() {
+	template<class TL>
+	inline Lista<TL>::Lista() {
 		pPrimeiro = nullptr;
 		pAtual = nullptr;
 	}
 
-	template<class tipo>
-	inline Lista<tipo>::~Lista() {
+	template<class TL>
+	inline Lista<TL>::~Lista() {
 		LimpaLista();
 	}
 
-	template<class tipo>
-	inline bool Lista<tipo>::InserirElemento(tipo* Elemen) {
+	template<class TL>
+	inline bool Lista<TL>::InserirElemento(TL* Elemen) {
 
 		if (Elemen != nullptr) {
 			
-			Elemento<tipo>* pAux = new Elemento<tipo>;	pAux->setInfo(Elemen);
+			Elemento<TL>* pAux = new Elemento<TL>;	pAux->setInfo(Elemen);
 
 			if (pPrimeiro == nullptr && pAtual == nullptr) {
 				pPrimeiro = pAux;	pAtual = pAux;
@@ -109,9 +109,9 @@ namespace Listas {
 		}
 	}
 
-	template<class tipo>
-	inline void Lista<tipo>::LimpaLista(){
-		Elemento<tipo>* aux;
+	template<class TL>
+	inline void Lista<TL>::LimpaLista(){
+		Elemento<TL>* aux;
 
 		while (pPrimeiro != nullptr) {
 			aux = pPrimeiro->getProx();
@@ -119,7 +119,4 @@ namespace Listas {
 			pPrimeiro = aux;
 		}
 	}
-
-
-	
 }

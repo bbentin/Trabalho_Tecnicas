@@ -4,10 +4,10 @@ namespace Entidades {
     class Chao :
         public Entidade{
     private:
-        static bool chao2;
+     
     public:
         Chao();
-        Chao(bool tipo);
+        Chao(int tipo);
         ~Chao();
 
         void executar();
