@@ -18,6 +18,8 @@ namespace Entidades {
 		virtual void executar() = 0;
 		virtual void mover() = 0;
 		void setMax_min();
+		void setPosicao(sf::Vector2f posi);
+		void setPosicao(float x, float y);
 		sf::Vector2f getLocal();
 	};
 }

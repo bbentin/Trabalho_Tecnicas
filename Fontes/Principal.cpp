@@ -1,10 +1,9 @@
 #include "../Cabecalhos/Principal.h"
 
-Principal::Principal() :Tela(sf::VideoMode(640, 480), "Jogo Funcionando"),Gabriel(100.0f,100.0f),floor(false) {
+Principal::Principal() :Tela(sf::VideoMode(640, 480), "Jogo Funcionando"),floor(false) {
 	Primeiro.setTela(&Tela);	Segundo.setTela(&Tela);	floor.setTela(&Tela);
-	Colisoes.setJogador(&Primeiro);
-	Gabriel.setTela(&Tela); Colisoes.InserirInimigo(&Gabriel);	//Jogadores e Inimigos criados estaticamente para fins de teste
-	Ze.setTela(&Tela);	Colisoes.InserirInimigo(&Ze);
+	//Jogadores e Inimigos criados estaticamente para fins de teste
+		
 	Primeiro.setIntervalo(relogio);	Segundo.setIntervalo(relogio);
 	Cacto.setTela(&Tela);
 	Cogumelo.setTela(&Tela);
