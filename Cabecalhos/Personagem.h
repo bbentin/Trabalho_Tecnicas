@@ -1,7 +1,7 @@
 #pragma once
 #include "../Cabecalhos/Entidade.h"
 using namespace Entidades;
-#define  TEMPO 0.0017;
+#define  TEMPO 0.0040;
 namespace Personagens {
 	class Personagem :public Entidade {
 

@@ -1,4 +1,5 @@
 #include "../Cabecalhos/Summer.h"
+#include "../Cabecalhos/Fase_1.h"
 using namespace Fases;
 
 Summer::Summer() {

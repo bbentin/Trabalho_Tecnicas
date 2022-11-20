@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "Gerenciador_Grafico.h"
 #include <iostream>
 class Ente{
 
@@ -8,7 +9,7 @@ protected:
 
 	sf::RectangleShape corpo;
 	sf::FloatRect Limites;
-	sf::RenderWindow* pTela;
+	Gerenciador_Grafico* GGrafico;
 
 	
 public:
@@ -17,7 +18,7 @@ public:
 
 	virtual void executar() = 0;
 	void imprimir();
-	void setTela(sf::RenderWindow* Screen);
+	void setTela(Gerenciador_Grafico* g);
 	sf::FloatRect getLimites();
 };
 
