@@ -1,8 +1,11 @@
 #include "../Cabecalhos/Principal.h"
 
-Principal::Principal() /* :Tela(sf::VideoMode(640, 480), "Jogo Funcionando"), floor(false) */{
+using namespace sf;
+
+Principal::Principal() : estado(0), pause(false) /*, floor(false) */ { // Para estado: "0" = menu; "1" = fase 1; "2" = fase 2;
 	
-	
+	MenuPrincipal.setTela(&GGrafico);
+
 
 	Primeiro.setTela(&GGrafico);	Segundo.setTela(&GGrafico);	floor.setTela(&GGrafico);
 	//Jogadores e Inimigos criados estaticamente para fins de teste
@@ -22,30 +25,46 @@ void Principal::executar(){
 	
 	while (GGrafico.getTela()->isOpen()) {
 	
-		sf::Event Eventos;
+		Event Eventos;
+
 		while (GGrafico.getTela()->pollEvent(Eventos)) {
-			if (Eventos.type == sf::Event::Closed) {
-				GGrafico.getTela()->close();
+			switch (Eventos.type){
+				case Event::KeyReleased:
+					switch (Eventos.key.code) {
+						case Keyboard::Escape: {
+							cout << "Apertou esc" << endl;
+							if (pause)
+								pause = false;
+							else 
+								pause = true;
+							break;
+						}
+						case Event::Closed: {  // TALVEZ SEJA AQUI QUE ESTEJA FECHANDO O JOGO APERTANDO A
+							GGrafico.getTela()->close();
+							cout << "Apertou para sair" << endl;
+							break;
+						}
+					}
+				break;
 			}
-				relogio.restart();
-				GGrafico.getTela()->clear();
-				Primeiro.setIntervalo(relogio);
-				Segundo.setIntervalo(relogio);
-				floor.executar();
-				Primeiro.executar();
-				Segundo.executar2();
+		}
 
-				Bomb.executar();
-				Cogumelo.executar();
-				Chefe.executar(); Ped.executar();
-				Cacto.executar();
 
-				//Gabriel.executar();	Ze.executar();
-				GGrafico.getTela()->display();
-				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
-					GGrafico.getTela()->close();
-					return;// sai do loop infinito
-				}
+		if (!pause) {	// a partir daqui executa as sprites e fisicas do jogo 
+			relogio.restart();
+			GGrafico.getTela()->clear();
+			Primeiro.setIntervalo(relogio);
+			Segundo.setIntervalo(relogio);
+			floor.executar();
+			Primeiro.executar(); //ENTENDER O PQ TA BUGANDO AO APERTAR "A"
+			Segundo.executar2();
+
+			Bomb.executar();
+			Cogumelo.executar();
+			Chefe.executar(); Ped.executar();
+			Cacto.executar();
+
+			GGrafico.getTela()->display();
 		}
 	}
 }

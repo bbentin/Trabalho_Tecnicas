@@ -40,6 +40,7 @@ void Jogador::executar(){
 	GGrafico->desenhar(corpo);
 	Limites = corpo.getGlobalBounds();
 }
+
 void Jogador::executar2() {
 	mover2();
 	calcular_Fisica();

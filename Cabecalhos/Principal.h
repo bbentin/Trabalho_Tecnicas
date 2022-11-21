@@ -10,15 +10,21 @@
 #include "../Cabecalhos/Pedra.h"
 #include "../Cabecalhos/Balao.h"
 #include "../Cabecalhos/Bomba.h"
+#include "../Cabecalhos/Menu.h"
 
 class Principal{
 private:
-	//sf::RenderWindow Tela;
+	int estado;
+	bool pause;
+
 	Jogador Primeiro, Segundo;
 	Gerenciador_Colisoes Colisoes;
 	Gerenciador_Grafico GGrafico;
 	Chao floor;
 	sf::Clock relogio;
+
+	Menu MenuPrincipal;
+
 	Cactus Cacto;
 	Cogumelus Cogumelo;
 	Bomba Bomb;

@@ -1,7 +1,7 @@
 #include "../Cabecalhos/Ente.h"
 
 
-Ente::Ente():id(0),GGrafico(nullptr){
+Ente::Ente(): id(0),GGrafico(nullptr){
 	//corpo.setFillColor(sf::Color::Cyan); // cor azul padrao para todos os objetos
 }
 
