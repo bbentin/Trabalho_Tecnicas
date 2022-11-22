@@ -1,5 +1,5 @@
 #pragma once
-#include <SFML/Graphics.hpp>
+#include "../../SFML/include/SFML/Graphics.hpp"
 #include "Gerenciador_Grafico.h"
 #include <iostream>
 

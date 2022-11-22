@@ -1,6 +1,7 @@
 #pragma once
 #include "Ente.h"
 #include <iostream>
+#include <vector>
 
 using namespace sf;
 
