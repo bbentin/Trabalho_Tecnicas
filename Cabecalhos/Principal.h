@@ -1,16 +1,33 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 #include "../Cabecalhos/Gerenciador_Colisoes.h"
-#include "Fs_Summer.h"
+#include "../Cabecalhos/Inimigo.h"
+#include "../Cabecalhos/Chao.h"
+#include "../Cabecalhos/Cactus.h"
+#include "../Cabecalhos/Cogumelus.h"
+#include "../Cabecalhos/Pedra.h"
+#include "../Cabecalhos/Balao.h"
+#include "../Cabecalhos/Bomba.h"
 
 class Principal{
 private:
-	sf::RenderWindow Tela;
+	int estado;
+	bool pause;
+
 	Jogador Primeiro, Segundo;
 	Gerenciador_Colisoes Colisoes;
-	Fases::Fs_Summer fase1;
+	Gerenciador_Grafico GGrafico;
+	Chao floor;
+	sf::Clock relogio;
 
-	//tirei os objetos estaticos que não precisam mais
+	Menu MenuPrincipal;
+
+	Cactus Cacto;
+	Cogumelus Cogumelo;
+	Bomba Bomb;
+	Balao Chefe; Pedra Ped; //chefe e seu projetil
+
+	//tirei os objetos estaticos que nï¿½o precisam mais
 
 public:
 	Principal();

@@ -14,7 +14,7 @@ Inimigo::~Inimigo(){
 }
 
 void Inimigo::executar(){ //função para como o inimigo irá se portar
-	pTela->draw(corpo); 
+	GGrafico->desenhar(corpo);
 	Limites = corpo.getGlobalBounds();
 }
 
