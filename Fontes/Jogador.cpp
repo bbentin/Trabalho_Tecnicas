@@ -8,13 +8,13 @@ Jogador::Jogador():Personagem() {
 		textura.loadFromFile("Images/Jogadores/Dino1/Dino1_estatico.png");
 		sprit.setTexture(textura);
 		corpo.setTexture(&textura);
-
 		Jogador2 = true;	num_vidas = 3; massa = 3;
 	}													//mesma construtora que ira funcionar de maneira diferente para 1 ou 2 jogadores
 	else{
 		corpo.setPosition(150.0, 150.0);
 		corpo.setSize(sf::Vector2f(16.0, 16.0));	corpo.setFillColor(sf::Color::White);
 		num_vidas = 3;	massa = 3;
+		Jogador2 = false;
 	}
 }
 
@@ -23,9 +23,9 @@ Jogador::~Jogador(){
 
 void Jogador::executar(){
 	mover();
+	
 	calcular_Fisica();
 	corpo.move(posicao);
-	cout << "posicao :" << posicao.x << endl;
 	pTela->draw(corpo);
 	Limites = corpo.getGlobalBounds();
 }
@@ -33,7 +33,6 @@ void Jogador::executar2() {
 	mover2();
 	calcular_Fisica();
 	corpo.move(posicao);
-	cout << "posicao2 :" << posicao.x << endl;
 	pTela->draw(corpo);
 	Limites = corpo.getGlobalBounds();
 }

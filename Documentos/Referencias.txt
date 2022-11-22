@@ -3,3 +3,4 @@ Física : https://www.toptal.com/game/video-game-physics-part-i-an-introduction-
 Sprites : https://arks.itch.io/dino-characters
 	    https://analogstudios.itch.io/four-seasons-platformer-tileset
 Tileset: https://analogstudios.itch.io/four-seasons-platformer-sprites
+Insipirado em criar a fase nos vídeos do Giovane

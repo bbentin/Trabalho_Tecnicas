@@ -11,6 +11,7 @@ namespace Personagens {
 		const static sf::Vector2f gravidade, f_Cima, f_Direita, f_Esquerda;
 		float massa;
 		sf::Time intervalo;
+		sf::Clock* p_relogio;
 	public:
 		Personagem();
 		~Personagem();
@@ -20,7 +21,7 @@ namespace Personagens {
 		void calcular_aceleracao(sf::Vector2f forca);
 		void somar_forca(sf::Vector2f forca_ext);
 		void calcular_posicao(sf::Time temp, sf::Vector2f velocidad);
-		void setIntervalo(sf::Clock passado);
+		void setRelogio(sf::Clock* passado);
 		void calcular_Fisica();
 
 	};

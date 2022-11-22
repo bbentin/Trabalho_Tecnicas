@@ -30,9 +30,10 @@ void Personagens::Personagem::somar_forca(sf::Vector2f forca_externa) {
 	forca_resultante.y = forca_externa.y + forca_resultante.y;
 }
 
-void Personagens::Personagem::setIntervalo(sf::Clock passado) {
-	intervalo = passado.getElapsedTime();
+void Personagens::Personagem::setRelogio(sf::Clock* passado) {
+	p_relogio = passado;
 }
+
 
 void Personagens::Personagem::calcular_Fisica(){
 	//somar_forca(gravidade);

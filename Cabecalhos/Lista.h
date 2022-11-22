@@ -23,7 +23,7 @@ namespace Listas {
 			void setProx(Elemento<TE>* Prox) {
 				pProx = Prox;
 			}
-			TL* getInfo() {
+			TE* getInfo() {
 				return pInfo;
 			}
 
@@ -36,7 +36,7 @@ namespace Listas {
 		Elemento<TL>* pPrimeiro;
 		Elemento<TL>* pAtual;
 	public:
-
+		
 		Lista();
 		~Lista();
 

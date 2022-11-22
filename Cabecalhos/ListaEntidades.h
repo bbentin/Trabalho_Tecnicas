@@ -6,6 +6,7 @@ namespace Listas {
 	class ListaEntidades {
 	public:
 		Lista<Entidade> ListaE;
+		sf::RenderWindow* pTela;
 
 		ListaEntidades();
 		~ListaEntidades();
@@ -13,6 +14,7 @@ namespace Listas {
 		bool InserirElemento(Entidade* Elemento);
 		bool RetirarElemento(Entidade* Elemento);
 		void LimpaLista();
+		void percorrer();
 
 	};
 }

@@ -7,8 +7,9 @@ Ente::Ente():id(0),pTela(nullptr){
 Ente::~Ente() {
 }
 
-void Ente::imprimir(){
-	pTela->draw(corpo); // corpo se imprime
+void Ente::imprimir(){ 
+	pTela->draw(corpo);
+	// corpo se imprime
 }
 
 void Ente::setTela(sf::RenderWindow* Screen){
