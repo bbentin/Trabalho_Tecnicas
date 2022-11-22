@@ -5,7 +5,6 @@ namespace Personagens {
 	class Bomba :public Inimigo {
 
 	private:
-		int vida;
 
 	public:
 		Bomba();
