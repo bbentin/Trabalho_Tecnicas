@@ -12,6 +12,8 @@ public:
 
 	sf::RenderWindow* getTela() { return &Tela; };
 	
+
 	void desenhar(sf::RectangleShape corpo);
+	void desenhar(sf::Text texto);
 };
 

@@ -1,6 +1,7 @@
 #include "../Cabecalhos/Pedra.h"
 
 Entidades::Pedra::Pedra() {
+
 	corpo.setSize(sf::Vector2f(6.0, 6.0));
 	corpo.setPosition(140.0, 50.0);
 

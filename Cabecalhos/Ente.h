@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "Gerenciador_Grafico.h"
 #include <iostream>
+
 class Ente{
 
 protected:
@@ -10,7 +11,6 @@ protected:
 	sf::RectangleShape corpo;
 	sf::FloatRect Limites;
 	Gerenciador_Grafico* GGrafico;
-
 	
 public:
 	Ente();

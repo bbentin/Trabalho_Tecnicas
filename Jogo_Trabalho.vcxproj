@@ -19,53 +19,59 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Cabecalhos\Autumn.h" />
     <ClInclude Include="Cabecalhos\Balao.h" />
+    <ClInclude Include="Cabecalhos\Bomba.h" />
+    <ClInclude Include="Cabecalhos\Cactus.h" />
     <ClInclude Include="Cabecalhos\Chao.h" />
+    <ClInclude Include="Cabecalhos\Cogumelus.h" />
     <ClInclude Include="Cabecalhos\Ente.h" />
     <ClInclude Include="Cabecalhos\Entidade.h" />
     <ClInclude Include="Cabecalhos\Fase.h" />
-    <ClInclude Include="Cabecalhos\Summer.h" />
-    <ClInclude Include="Cabecalhos\Autumn.h" />
+    <ClInclude Include="Cabecalhos\Fase_1.h" />
     <ClInclude Include="Cabecalhos\Gerenciador_Colisoes.h" />
     <ClInclude Include="Cabecalhos\Gerenciador_Grafico.h" />
     <ClInclude Include="Cabecalhos\Inimigo.h" />
-    <ClInclude Include="Cabecalhos\Cogumelo.h" />
-    <ClInclude Include="Cabecalhos\Bomba.h" />
     <ClInclude Include="Cabecalhos\Jogador.h" />
+    <ClInclude Include="Cabecalhos\Lava.h" />
     <ClInclude Include="Cabecalhos\Lista.h" />
     <ClInclude Include="Cabecalhos\ListaEntidades.h" />
+    <ClInclude Include="Cabecalhos\Menu.h" />
     <ClInclude Include="Cabecalhos\Obstaculo.h" />
-    <ClInclude Include="Cabecalhos\Cactus.h" />
-    <ClInclude Include="Cabecalhos\Lava.h" />
+    <ClInclude Include="Cabecalhos\Pedra.h" />
     <ClInclude Include="Cabecalhos\Personagem.h" />
     <ClInclude Include="Cabecalhos\Principal.h" />
-    <ClInclude Include="Cabecalhos\Pedra.h" />
+    <ClInclude Include="Cabecalhos\Summer.h" />
+    <ClInclude Include="Fase_2.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Fontes\Balao.cpp" />
+    <ClCompile Include="Fontes\Bomba.cpp" />
+    <ClCompile Include="Fontes\Cactus.cpp" />
     <ClCompile Include="Fontes\Chao.cpp" />
+    <ClCompile Include="Fontes\Cogumelus.cpp" />
     <ClCompile Include="Fontes\Ente.cpp" />
     <ClCompile Include="Fontes\Entidade.cpp" />
     <ClCompile Include="Fontes\Fase.cpp" />
     <ClCompile Include="Fontes\Fase_1.cpp" />
     <ClCompile Include="Fontes\Fase_2.cpp" />
+    <ClCompile Include="Fontes\Autumn.cpp" />
+    <ClCompile Include="Fontes\Menu.cpp" />
+    <ClCompile Include="Fontes\Summer.cpp" />
     <ClCompile Include="Fontes\Gerenciador_Colisoes.cpp" />
     <ClCompile Include="Fontes\Gerenciador_Grafico.cpp" />
     <ClCompile Include="Fontes\Inimigo.cpp" />
-    <ClCompile Include="Fontes\Cogumelo.cpp" />
-    <ClCompile Include="Fontes\Bomba.cpp" />
     <ClCompile Include="Fontes\Jogador.cpp" />
+    <ClCompile Include="Fontes\Lava.cpp" />
     <ClCompile Include="Fontes\ListaEntidades.cpp" />
     <ClCompile Include="Fontes\main.cpp" />
     <ClCompile Include="Fontes\Obstaculo.cpp" />
-    <ClCompile Include="Fontes\Cactus.cpp" />
-    <ClCompile Include="Fontes\Lava.cpp" />
+    <ClCompile Include="Fontes\Pedra.cpp" />
     <ClCompile Include="Fontes\Personagem.cpp" />
     <ClCompile Include="Fontes\Principal.cpp" />
-    <ClCompile Include="Fontes\Pedra.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -134,13 +140,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\rbben\Documents\Faculdade\2022-2\Tecnicas\Jogo_Trabalho\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Trabalho_Tecnicas\External\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-audio-d.lib;sfml-network-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\rbben\Documents\Faculdade\2022-2\Tecnicas\Jogo_Trabalho\SFML\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)\Trabalho_Tecnicas\External\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -151,14 +157,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\rbben\Documents\Faculdade\Tecnicas\Jogo_Trabalho\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\seiji\source\repos\Trabalho_Tecnicas\External\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\rbben\Documents\Faculdade\Tecnicas\Jogo_Trabalho\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\seiji\source\repos\Trabalho_Tecnicas\External\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-audio.lib;sfml-network.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

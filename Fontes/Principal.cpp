@@ -1,11 +1,9 @@
 #include "../Cabecalhos/Principal.h"
-
 using namespace sf;
 
 Principal::Principal() : estado(0), pause(false) /*, floor(false) */ { // Para estado: "0" = menu; "1" = fase 1; "2" = fase 2;
 	
 	MenuPrincipal.setTela(&GGrafico);
-
 
 	Primeiro.setTela(&GGrafico);	Segundo.setTela(&GGrafico);	floor.setTela(&GGrafico);
 	//Jogadores e Inimigos criados estaticamente para fins de teste
@@ -50,11 +48,14 @@ void Principal::executar(){
 		}
 
 
+
+
 		if (!pause) {	// a partir daqui executa as sprites e fisicas do jogo 
 			relogio.restart();
 			GGrafico.getTela()->clear();
 			Primeiro.setIntervalo(relogio);
 			Segundo.setIntervalo(relogio);
+			MenuPrincipal.executar();
 			floor.executar();
 			Primeiro.executar(); //ENTENDER O PQ TA BUGANDO AO APERTAR "A"
 			Segundo.executar2();

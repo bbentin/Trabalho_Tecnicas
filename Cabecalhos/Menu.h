@@ -1,14 +1,16 @@
 #pragma once
 #include "Ente.h"
 #include <iostream>
+
 using namespace sf;
 
 class Menu : public Ente {
 private:
 	int pos;
 	bool pressionado, enter;  //para quando pressionar e soltar rapido demais
-	Font* font;
-	Texture* image;
+	Font font;
+	Texture image;
+	sf::Text texto;
 
 	std::vector<const char*> opcoes;
 	std::vector<Vector2f> coords;
@@ -18,8 +20,6 @@ private:
 public:
 	Menu();
 	~Menu();
-
-	void desenhar();
 
 	void cima();
 	void baixo();
