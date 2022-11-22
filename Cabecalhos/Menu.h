@@ -7,7 +7,7 @@ using namespace sf;
 class Menu : public Ente {
 private:
 	int pos;
-	bool pressionado, enter;  //para quando pressionar e soltar rapido demais
+	bool pressionado, enter, dois_jogadores;  //para quando pressionar e soltar rapido demais
 	Font font;
 	Texture image;
 	sf::Text texto;
@@ -25,6 +25,8 @@ public:
 	void baixo();
 
 	int getOpcao();
+	bool doisJogadores();
 
 	void executar();
+
 };

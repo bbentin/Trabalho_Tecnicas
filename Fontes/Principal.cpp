@@ -1,7 +1,7 @@
 #include "../Cabecalhos/Principal.h"
 using namespace sf;
 
-Principal::Principal() : estado(0), pause(false) /*, floor(false) */ { // Para estado: "0" = menu; "1" = fase 1; "2" = fase 2;
+Principal::Principal() : dois_jogadores(false), pressionado(false), enter(false), pause(false) ,estado(0)   /*, floor(false) */ { // Para estado: "0" = menu; "1" = fase 1; "2" = fase 2;
 	
 	MenuPrincipal.setTela(&GGrafico);
 
@@ -29,7 +29,44 @@ void Principal::executar(){
 			switch (Eventos.type){
 				case Event::KeyReleased:
 					switch (Eventos.key.code) {
-						case Keyboard::Escape: {
+						case Keyboard::Up: {
+							MenuPrincipal.cima();
+							cout << "cima" << endl;
+							break;
+						}
+						case Keyboard::Down: {
+							MenuPrincipal.baixo();
+							cout << "baixo" << endl;
+							break;
+						}
+						case Keyboard::Space: {
+							if (!pressionado) { //para evitar pressionamentos rapidos
+								pressionado = true;
+								estado = MenuPrincipal.getOpcao();
+								pressionado = false;
+
+								switch (estado) {
+									case 1: {
+										cout << "case 1 e estado:" << estado << endl;
+										break;
+									}
+									case 2: {
+										cout << "case 2" << endl;
+										break;
+									}
+									case 3: {
+
+										break;
+									}
+									case 4: {
+
+										break;
+									}
+								}
+							}
+							break;
+						}
+						case Keyboard::Escape: { //PAUSE
 							cout << "Apertou esc" << endl;
 							if (pause)
 								pause = false;
@@ -37,16 +74,15 @@ void Principal::executar(){
 								pause = true;
 							break;
 						}
-						case Event::Closed: {  // TALVEZ SEJA AQUI QUE ESTEJA FECHANDO O JOGO APERTANDO A
+						case Keyboard::BackSpace: { //APERTAR BACKSPACE PRA FECHAR JOGO
 							GGrafico.getTela()->close();
-							cout << "Apertou para sair" << endl;
+							cout << "Apertou Backspace" << endl;
 							break;
 						}
 					}
 				break;
 			}
 		}
-
 
 
 
@@ -57,9 +93,9 @@ void Principal::executar(){
 			Segundo.setIntervalo(relogio);
 			MenuPrincipal.executar();
 			floor.executar();
-			Primeiro.executar(); //ENTENDER O PQ TA BUGANDO AO APERTAR "A"
-			Segundo.executar2();
-
+			Primeiro.executar(); 
+			if(dois_jogadores) 
+				Segundo.executar2();
 			Bomb.executar();
 			Cogumelo.executar();
 			Chefe.executar(); Ped.executar();

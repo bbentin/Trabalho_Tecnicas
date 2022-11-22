@@ -15,7 +15,8 @@
 class Principal{
 private:
 	int estado;
-	bool pause;
+	bool pause, pressionado, enter, dois_jogadores;
+
 
 	Jogador Primeiro, Segundo;
 	Gerenciador_Colisoes Colisoes;

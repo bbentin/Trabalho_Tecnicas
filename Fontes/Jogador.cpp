@@ -36,7 +36,6 @@ void Jogador::executar(){
 	mover();
 	calcular_Fisica();
 	corpo.move(posicao);
-	cout << "posicao :" << posicao.x << endl;
 	GGrafico->desenhar(corpo);
 	Limites = corpo.getGlobalBounds();
 }
@@ -45,7 +44,6 @@ void Jogador::executar2() {
 	mover2();
 	calcular_Fisica();
 	corpo.move(posicao);
-	cout << "posicao2 :" << posicao.x << endl;
 	GGrafico->desenhar(corpo);
 	Limites = corpo.getGlobalBounds();
 }
