@@ -15,3 +15,12 @@ sf::Vector2f Entidades::Entidade::getLocal(){
 	return max_min_x;
 }
 
+void Entidades::Entidade::setPosicao(sf::Vector2f posi) {
+	corpo.setPosition(posi);
+	posicao = posi;
+}
+
+void Entidades::Entidade::setPosicao(float x, float y){
+	posicao.x = x; posicao.y = y;
+	corpo.setPosition(posicao);
+}

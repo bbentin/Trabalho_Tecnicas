@@ -1,36 +1,72 @@
 #include "../Cabecalhos/Principal.h"
+using namespace sf;
 
-Principal::Principal() :Tela(sf::VideoMode(800, 800), "Jogo Funcionando"),Gabriel(100.0f,100.0f) {
-	Primeiro.setTela(&Tela);	Segundo.setTela(&Tela);
-	Colisoes.setJogador(&Primeiro);
-	Gabriel.setTela(&Tela); Colisoes.InserirInimigo(&Gabriel);	//Jogadores e Inimigos criados estaticamente para fins de teste
-	Ze.setTela(&Tela);	Colisoes.InserirInimigo(&Ze);
+Principal::Principal() : estado(0), pause(false) /*, floor(false) */ { // Para estado: "0" = menu; "1" = fase 1; "2" = fase 2;
+	
+	MenuPrincipal.setTela(&GGrafico);
+
+	Primeiro.setTela(&GGrafico);	Segundo.setTela(&GGrafico);	floor.setTela(&GGrafico);
+	//Jogadores e Inimigos criados estaticamente para fins de teste
+		
 	Primeiro.setIntervalo(relogio);	Segundo.setIntervalo(relogio);
+
+	Cacto.setTela(&GGrafico);
+	Cogumelo.setTela(&GGrafico);
+	Bomb.setTela(&GGrafico);
+	Chefe.setTela(&GGrafico); Ped.setTela(&GGrafico); //chefe e seu projetil
 }
+
 Principal::~Principal() {
 }
 
 void Principal::executar(){
 	
-	while (Tela.isOpen()) {
+	while (GGrafico.getTela()->isOpen()) {
 	
-		sf::Event Eventos;
-		while (Tela.pollEvent(Eventos)) {
-			if (Eventos.type == sf::Event::Closed) {
-				Tela.close();
+		Event Eventos;
+
+		while (GGrafico.getTela()->pollEvent(Eventos)) {
+			switch (Eventos.type){
+				case Event::KeyReleased:
+					switch (Eventos.key.code) {
+						case Keyboard::Escape: {
+							cout << "Apertou esc" << endl;
+							if (pause)
+								pause = false;
+							else 
+								pause = true;
+							break;
+						}
+						case Event::Closed: {  // TALVEZ SEJA AQUI QUE ESTEJA FECHANDO O JOGO APERTANDO A
+							GGrafico.getTela()->close();
+							cout << "Apertou para sair" << endl;
+							break;
+						}
+					}
+				break;
 			}
-				relogio.restart();
-				Tela.clear();
-				Primeiro.setIntervalo(relogio);
-				Segundo.setIntervalo(relogio);
-				Primeiro.executar();
-				Segundo.executar2();
-				//Gabriel.executar();	Ze.executar();
-				Tela.display(); 
-				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
-					Tela.close();
-					return;// sai do loop infinito
-				}
+		}
+
+
+
+
+		if (!pause) {	// a partir daqui executa as sprites e fisicas do jogo 
+			relogio.restart();
+			GGrafico.getTela()->clear();
+			Primeiro.setIntervalo(relogio);
+			Segundo.setIntervalo(relogio);
+			MenuPrincipal.executar();
+			floor.executar();
+			Primeiro.executar(); //ENTENDER O PQ TA BUGANDO AO APERTAR "A"
+			Segundo.executar2();
+
+			Bomb.executar();
+			Cogumelo.executar();
+			Chefe.executar(); Ped.executar();
+			Cacto.executar();
+
+			GGrafico.getTela()->display();
 		}
 	}
 }
+

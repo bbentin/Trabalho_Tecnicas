@@ -3,14 +3,30 @@ using namespace Personagens;
 
 Jogador::Jogador():Personagem() {
 	if (!Jogador2) {
-		corpo.setPosition(400.0, 400.0);
-		corpo.setSize(sf::Vector2f(16.0, 16.0));
-		Jogador2 = true;	num_vidas = 3; massa = 3;
+		corpo.setPosition(2 * espaco, 26 * espaco);
+		corpo.setSize(sf::Vector2f(18.0, 14.0));
+		textura.loadFromFile("Images/Jogadores/Dino1/Dino1_estatico.png");
+		sprit.setTexture(textura);
+		corpo.setTexture(&textura);
+
+		num_vidas = 3; massa = 3;
+		Jogador2 = true;	
 	}													//mesma construtora que ira funcionar de maneira diferente para 1 ou 2 jogadores
+	else if (!Jogador1) {
+		corpo.setPosition(0 * espaco, 26 * espaco);
+		corpo.setSize(sf::Vector2f(18.0, 14.0));
+		textura.loadFromFile("Images/Jogadores/Dino2/Dino2_estatico.png");
+		sprit.setTexture(textura);
+		corpo.setTexture(&textura);
+
+		num_vidas = 3; massa = 3;
+		Jogador1 = true;
+	}
 	else{
-		corpo.setPosition(700.0, 700.0);
+		corpo.setPosition(150.0, 150.0);
 		corpo.setSize(sf::Vector2f(16.0, 16.0));	corpo.setFillColor(sf::Color::White);
 		num_vidas = 3;	massa = 3;
+		Jogador2 = false;
 	}
 }
 
@@ -19,18 +35,20 @@ Jogador::~Jogador(){
 
 void Jogador::executar(){
 	mover();
+	
 	calcular_Fisica();
 	corpo.move(posicao);
 	cout << "posicao :" << posicao.x << endl;
-	pTela->draw(corpo);
+	GGrafico->desenhar(corpo);
 	Limites = corpo.getGlobalBounds();
 }
+
 void Jogador::executar2() {
 	mover2();
 	calcular_Fisica();
 	corpo.move(posicao);
 	cout << "posicao2 :" << posicao.x << endl;
-	pTela->draw(corpo);
+	GGrafico->desenhar(corpo);
 	Limites = corpo.getGlobalBounds();
 }
 
@@ -63,5 +81,5 @@ void Jogador::mover2() { //controle do jogador 2
 		somar_forca(gravidade);
 	}
 }
-
+bool Jogador::Jogador1 = false;
 bool Jogador::Jogador2 = false; 

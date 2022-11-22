@@ -1,24 +1,3 @@
-﻿  Jogador.cpp
-  Personagem.cpp
-C:\Users\rbben\Documents\Faculdade\2022-2\Tecnicas\Jogo_Trabalho\Jogo_Trabalho\Fontes\Personagem.cpp(17,51): warning C4244: '=': conversão de 'double' para 'T', possível perda de dados
-          with
-          [
-              T=float
-          ]
-C:\Users\rbben\Documents\Faculdade\2022-2\Tecnicas\Jogo_Trabalho\Jogo_Trabalho\Fontes\Personagem.cpp(17,110): warning C4244: '=': conversão de 'double' para 'T', possível perda de dados
-          with
-          [
-              T=float
-          ]
-C:\Users\rbben\Documents\Faculdade\2022-2\Tecnicas\Jogo_Trabalho\Jogo_Trabalho\Fontes\Personagem.cpp(25,45): warning C4244: '=': conversão de 'double' para 'T', possível perda de dados
-          with
-          [
-              T=float
-          ]
-C:\Users\rbben\Documents\Faculdade\2022-2\Tecnicas\Jogo_Trabalho\Jogo_Trabalho\Fontes\Personagem.cpp(25,98): warning C4244: '=': conversão de 'double' para 'T', possível perda de dados
-          with
-          [
-              T=float
-          ]
-  Gerando Código...
-  Jogo_Trabalho.vcxproj -> C:\Users\rbben\Documents\Faculdade\2022-2\Tecnicas\Jogo_Trabalho\Jogo_Trabalho\Debug\Jogo_Trabalho.exe
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: O diretório intermediário (Debug\) contém arquivos compartilhados de outro projeto (Jogo_Trabalho.vcxproj). Isso pode levar a um comportamento incorreto de limpeza e recompilação.
+  Cactus.cpp
+  Jogo_Trabalho.vcxproj -> C:\Users\rbben\Documents\Faculdade\2022-2\Tecnicas\Jogo_Trabalho\Jogo_Trabalho\Debug\Dino_Seasons.exe

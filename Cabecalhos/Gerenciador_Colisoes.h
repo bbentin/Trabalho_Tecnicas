@@ -15,8 +15,6 @@ private:
 	list<Obstaculo*> LObstaculos;
 	vector<sf::Vector2f> mins_e_maximos;
 	list<sf::Vector2f> intervalos_ativos;
-	Jogador* Jogador1;
-	Jogador* Jogador2;
 	
 public:
 
