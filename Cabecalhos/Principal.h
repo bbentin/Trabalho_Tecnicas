@@ -1,5 +1,5 @@
 #pragma once
-#include "SFML/Graphics.hpp"
+#include "../External/include/SFML/Graphics.hpp"
 #include "../Cabecalhos/Gerenciador_Colisoes.h"
 #include "../Cabecalhos/Inimigo.h"
 #include "../Cabecalhos/Chao.h"
