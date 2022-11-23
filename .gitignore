@@ -399,3 +399,6 @@ FodyWeavers.xsd
 /.vs/Jogo_Trabalho/v17/Browse.VC.db
 /Jogo_Trabalho.vcxproj
 /Debug/Obstaculo.obj
+/Jogo_Trabalho.vcxproj
+/Jogo_Trabalho.vcxproj.filters
+/packages.config
