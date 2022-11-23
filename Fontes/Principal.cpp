@@ -1,7 +1,7 @@
 #include "../Cabecalhos/Principal.h"
 using namespace sf;
 
-Principal::Principal() : dois_jogadores(false), pressionado(false), enter(false), pause(false) ,estado(0)   /*, floor(false) */ { // Para estado: "0" = menu; "1" = fase 1; "2" = fase 2;
+Principal::Principal() : pressionado(false), enter(false), pause(false) ,estado(0)   , floor(false) { // Para estado: "0" = menu; "1" = fase 1; "2" = fase 2;
 	
 	MenuPrincipal.setTela(&GGrafico);
 
@@ -59,6 +59,10 @@ void Principal::executar(){
 										break;
 									}
 									case 4: {
+
+										break;
+									}
+									case 5: {
 
 										break;
 									}

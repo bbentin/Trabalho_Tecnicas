@@ -1,6 +1,6 @@
 #include "../Cabecalhos/Menu.h"
 
-Menu::Menu() : dois_jogadores(0), textos(0), pos(1), pressionado(false), enter(false) {
+Menu::Menu() : dois_jogadores(false), textos(0), pos(1), pressionado(false), enter(false) {
 
 	corpo.setSize(sf::Vector2f(640.0, 480.0));
 	corpo.setPosition(0.0, 0.0);
@@ -10,12 +10,12 @@ Menu::Menu() : dois_jogadores(0), textos(0), pos(1), pressionado(false), enter(f
 
 	corpo.setTexture(&image);
 
-	opcoes = {"Dino Seasons", "Jogar Fase Summer", "Jogar Fase Autumn", "Dois Jogadores? (Red = Y, white = N)", "Ranking", "Quit"};
+	opcoes = {"Dino Seasons", "Jogar Fase Summer", "Jogar Fase Autumn", "Dois Jogadores: Não", "Ranking", "Quit"};
 	textos.resize(6);
 	coords = { {200.0, 10.0},{25.0, 130.0},{25.0, 180.0},{25.0, 230.0}, {25.0, 280.0}, {25.0, 330.0} };
 	tmnhs = { 50, 20, 20, 20, 20, 20};
 
-	for (int i = 0; i < textos.size(); ++i) { //textos.size()-1 pq sem o -1 da bug(NAO FAZ SENTIDO)
+	for (int i = 0; i < textos.size()-1; ++i) { 
 		textos[i].setFont(font);
 		textos[i].setString(opcoes[i]);
 		textos[i].setCharacterSize(tmnhs[i]);
@@ -73,7 +73,7 @@ int Menu::getOpcao() {
 
 void Menu::executar() {
 	imprimir();  //Printa desenho de fundo
-	for (int i=0; i < textos.size(); ++i) {  //printa cada palavra do menu
+	for (int i = 0; i < textos.size(); ++i) {  //printa cada palavra do menu
 		texto = textos[i];
 		GGrafico->desenhar(texto);       
 	}
