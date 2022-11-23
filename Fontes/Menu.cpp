@@ -55,13 +55,13 @@ bool Menu::doisJogadores() {
 	if (dois_jogadores == true && !pressionado) {
 		pressionado = true;
 		dois_jogadores = false;
-		textos[3] = { "Dois Jogadores? Y" };
+		textos[3].setString("Dois Jogadores? Y");
 		pressionado = false;
 	}
 	if (dois_jogadores == true && !pressionado) {
 		pressionado = true;
 		dois_jogadores = true;
-		textos[3] = { "Dois Jogadores? N" };
+		textos[3].setString("Dois Jogadores? N");
 		pressionado = false;
 	}
 	return(dois_jogadores);
@@ -73,7 +73,7 @@ int Menu::getOpcao() {
 
 void Menu::executar() {
 	imprimir();  //Printa desenho de fundo
-	for (std::size_t i{}; i < textos.size(); ++i) {  //printa cada palavra do menu
+	for (int i=0; i < textos.size(); ++i) {  //printa cada palavra do menu
 		texto = textos[i];
 		GGrafico->desenhar(texto);       
 	}

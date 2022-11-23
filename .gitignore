@@ -397,3 +397,5 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 /.vs/Jogo_Trabalho/v17/Browse.VC.db
+/Jogo_Trabalho.vcxproj
+/Debug/Obstaculo.obj
