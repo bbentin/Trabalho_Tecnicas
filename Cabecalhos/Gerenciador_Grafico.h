@@ -14,6 +14,7 @@ public:
 	
 
 	void desenhar(sf::RectangleShape corpo);
-	void desenhar(sf::Text texto); //sobrecarga
+
+	void desenhar(sf::Text* texto); //sobrecarga
 };
 

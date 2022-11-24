@@ -8,14 +8,14 @@ using namespace sf;
 class Menu : public Ente {
 private:
 	int pos;
-	bool pressionado, enter, dois_jogadores;  //para quando pressionar e soltar rapido demais
+	bool pressionado, dois_jogadores;  //para quando pressionar e soltar rapido demais
 	Font font;
 	Texture image;
-	sf::Text texto;
+
 
 	std::vector<const char*> opcoes;
 	std::vector<Vector2f> coords;
-	std::vector<Text> textos;
+	std::vector<Text*> textos;
 	std::vector<size_t> tmnhs;
 	
 public:
@@ -28,6 +28,6 @@ public:
 	int getOpcao();
 	bool doisJogadores();
 
-	void executar();
+	 void executar();
 
 };

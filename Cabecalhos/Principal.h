@@ -12,25 +12,24 @@
 #include "../Cabecalhos/Bomba.h"
 #include "../Cabecalhos/Menu.h"
 
-class Principal{
+class Principal {
 private:
 	int estado;
 	bool pause, pressionado, enter, dois_jogadores;
 
-
+	Menu MenuPrincipal;
 	Jogador Primeiro, Segundo;
 	Gerenciador_Colisoes Colisoes;
-	Gerenciador_Grafico GGrafico;
+	Gerenciador_Grafico G_Grafico;
 	Chao floor;
 	sf::Clock relogio;
-
-	Menu MenuPrincipal;
-
 	Cactus Cacto;
 	Cogumelus Cogumelo;
 	Bomba Bomb;
 	Balao Chefe; Pedra Ped; //chefe e seu projetil
 
+	//Fs_Summer Fase1;
+	//Fs_Autumn Fase2;
 
 public:
 	Principal();

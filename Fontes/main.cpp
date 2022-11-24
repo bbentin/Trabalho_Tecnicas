@@ -3,6 +3,7 @@
 int main()
 {
     Principal Jogo;
+    cout << "a" << endl;
 
     Jogo.executar();
 

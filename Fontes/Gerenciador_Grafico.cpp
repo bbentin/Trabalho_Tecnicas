@@ -10,11 +10,11 @@ Gerenciador_Grafico::~Gerenciador_Grafico()
 }
 
 void Gerenciador_Grafico::desenhar(sf::RectangleShape corpo){
-	
 	Tela.draw(corpo);
 }
 
-void Gerenciador_Grafico::desenhar(sf::Text texto) {
-	Tela.draw(texto);
+void Gerenciador_Grafico::desenhar(sf::Text* texto) {
+	if (texto)
+		Tela.draw(*texto);
 }
 
